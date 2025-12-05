@@ -1,0 +1,30 @@
+---
+const socialLinks = [
+  { title: 'GitHub', href: 'https://github.com/jzorrilla-dev' },
+  { title: 'LinkedIn', href: 'https://www.linkedin.com/in/juan-zorrilla-589b5427a' }
+]
+---
+
+<footer
+  class="bg-slate-300 dark:bg-slate-700 border-t border-gray-300 py-8 dark:border-gray-600 transition-colors duration-500"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-sm text-gray-500 dark:text-gray-400 transition-colors duration-500">
+      © {new Date().getFullYear()} Juan Zorrilla | Desarrollado con ❤️
+    </p>
+    <div class="flex space-x-6 order-1 sm:order-2">
+      {
+        socialLinks.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-800 hover:text-sky-400 dark:text-gray-300 dark:hover:text-sky-500 transition duration-150 text-2xl font-medium"
+          >
+            {link.title}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</footer>

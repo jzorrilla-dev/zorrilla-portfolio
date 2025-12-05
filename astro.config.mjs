@@ -1,5 +1,11 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from 'astro/config'
 
-// https://astro.build/config
-export default defineConfig({});
+import react from '@astrojs/react'
+
+export default defineConfig({
+  // El plugin de Astro/Vite debería detectar automáticamente los archivos de configuración
+  integrations: [react()],
+  devToolbar: {
+    enabled: false
+  }
+})
