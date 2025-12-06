@@ -1,43 +1,61 @@
-# Astro Starter Kit: Minimal
+# Juan's Web Development Portfolio
 
-```sh
-pnpm create astro@latest -- --template minimal
+A modern, responsive portfolio website showcasing web development projects and skills, built with Astro, Tailwind CSS, and React.
+
+## 🚀 Overview
+
+This portfolio serves as a personal showcase for web development work, featuring a clean design with dark/light theme toggle, interactive components, and a collection of projects demonstrating various technologies and frameworks.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Astro](https://astro.build/) - Static site generator for fast, content-focused websites
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- **Components**: [React](https://reactjs.org/) - For interactive UI components
+- **Icons**: Custom SVG icons for technologies
+- **Deployment**: Ready for static hosting platforms
+
+## ✨ Features
+
+- **Responsive Design**: Optimized for all device sizes
+- **Theme Toggle**: Dark and light mode support
+- **Project Showcase**: Interactive project cards with previews
+- **Skills Section**: Visual representation of technical skills
+- **Contact Form**: Functional contact form with validation
+- **Performance Optimized**: Fast loading with Astro's static generation
+- **SEO Friendly**: Proper meta tags and semantic HTML
+
+## 📁 Project Structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
+│   ├── images/previews/     # Project preview images
+│   └── favicon.svg          # Site favicon
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/          # Astro components
+│   │   ├── react/          # React components
+│   │   └── icons/          # Technology icons
+│   ├── layouts/            # Page layouts
+│   ├── pages/              # Route pages
+│   └── styles/             # Global styles
+└── astro.config.mjs        # Astro configuration
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+All commands are run from the root of the project:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+| Command        | Action                                       |
+| :------------- | :------------------------------------------- |
+| `pnpm install` | Installs dependencies                        |
+| `pnpm dev`     | Starts local dev server at `localhost:4321`  |
+| `pnpm build`   | Build your production site to `./dist/`      |
+| `pnpm preview` | Preview your build locally, before deploying |
 
-## 👀 Want to learn more?
+## 📧 Contact
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to reach out through the contact form on the website or connect via the provided social links.
+
+---
+
+Built with ❤️ using Astro, Tailwind CSS, and React.
