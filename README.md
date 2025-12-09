@@ -54,7 +54,7 @@ All commands are run from the root of the project:
 
 ## 📧 Contact
 
-Feel free to reach out through the contact form on the website or connect via the provided social links.
+Feel free to contact me on my website https://eloquent-strudel-8d91ce.netlify.app/ through the contact form or connect via the provided social links.
 
 ---
 

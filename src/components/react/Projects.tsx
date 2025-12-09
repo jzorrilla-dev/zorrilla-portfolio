@@ -29,8 +29,8 @@ const initialProjects: Project[] = [
     description:
       'Mi portafolio personal de alta velocidad, construido con Astro para una experiencia de usuario optimizada y excelente SEO.',
     tags: ['Astro', 'React', 'Tailwind', 'TypeScript'],
-    link: 'https://tu-dominio.com/',
-    repoLink: 'https://github.com/tu-usuario/mi-portfolio',
+    link: 'https://eloquent-strudel-8d91ce.netlify.app/',
+    repoLink: 'https://github.com/jzorrilla-dev/zorrilla-portfolio',
     previewImage: 'images/previews/portafolio-preview.png'
   }
 ]
