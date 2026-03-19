@@ -21,7 +21,7 @@ const initialProjects: Project[] = [
     tags: ['Alpine.js', 'Laravel', 'Tailwind', 'PostgreSQL'],
     link: 'https://petbook-project.onrender.com/',
     repoLink: 'https://github.com/jzorrilla-dev/laravel-fullstack-pet-book', // no olvidar añadir repoLink
-    previewImage: 'images/previews/petbook-preview-1.png'
+    previewImage: 'images/previews/petbook-preview.png'
   },
   {
     id: 2,
@@ -31,7 +31,17 @@ const initialProjects: Project[] = [
     tags: ['Astro', 'React', 'Tailwind', 'TypeScript'],
     link: 'https://eloquent-strudel-8d91ce.netlify.app/',
     repoLink: 'https://github.com/jzorrilla-dev/zorrilla-portfolio',
-    previewImage: 'images/previews/portafolio-preview.png'
+    previewImage: 'images/previews/portfolio-preview.png'
+  },
+  {
+    id: 3,
+    title: 'Landing Page para taller de bombas inyectoras',
+    description:
+      'Una landing page para un taller de reparación de bombas inyectoras, con información sobre servicios y contacto.',
+    tags: ['Astro', 'Vue', 'Tailwind', 'TypeScript'],
+    link: 'https://zorrilladiesel.netlify.app',
+    repoLink: 'https://github.com/jzorrilla-dev/astro-vue-zorrilla-diesel/tree/master',
+    previewImage: 'images/previews/workshop-preview.png'
   }
 ]
 

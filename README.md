@@ -11,6 +11,9 @@ This portfolio serves as a personal showcase for web development work, featuring
 - **Framework**: [Astro](https://astro.build/) - Static site generator for fast, content-focused websites
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
 - **Components**: [React](https://reactjs.org/) - For interactive UI components
+- **Linting**: [ESLint](https://eslint.org/) - Code quality and style enforcement
+- **Formatting**: [Prettier](https://prettier.io/) - Code formatting
+- **Package Manager**: [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
 - **Icons**: Custom SVG icons for technologies
 - **Deployment**: Ready for static hosting platforms
 
@@ -43,14 +46,24 @@ This portfolio serves as a personal showcase for web development work, featuring
 
 ## 🧞 Commands
 
-All commands are run from the root of the project:
+All commands are run from the root of the project using **pnpm**:
 
-| Command        | Action                                       |
-| :------------- | :------------------------------------------- |
-| `pnpm install` | Installs dependencies                        |
-| `pnpm dev`     | Starts local dev server at `localhost:4321`  |
-| `pnpm build`   | Build your production site to `./dist/`      |
-| `pnpm preview` | Preview your build locally, before deploying |
+| Command         | Action                               |
+| --------------- | ------------------------------------ |
+| `pnpm dev`      | Start dev server at `localhost:4321` |
+| `pnpm build`    | Build production site to `./dist/`   |
+| `pnpm preview`  | Preview production build             |
+| `pnpm lint`     | Run ESLint                           |
+| `pnpm lint:fix` | Fix ESLint errors automatically      |
+| `pnpm format`   | Format code with Prettier            |
+
+## ⚠️ Important Rules
+
+- **ONLY use `pnpm`** for package management (do NOT use npm or yarn)
+- Run `pnpm lint` and `pnpm lint:fix` before committing
+- Run `pnpm format` to format code before committing
+- Use Astro components (`.astro`) by default; React (`.tsx`) only for interactive components
+- **Commits in Spanish**: Use Spanish for commit messages, with English prefixes (feat, fix, change, etc.). Example: `feat: mejorar carrusel de habilidades y agregar proyecto de taller mecánico`
 
 ## 📧 Contact
 

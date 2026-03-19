@@ -6,8 +6,6 @@ import LaravelIcon from './icons/LaravelIcon.astro'
 import NodeIcon from './icons/NodeJSIcon.astro'
 import PostgresIcon from './icons/PostgresIcon.astro'
 import DockerIcon from './icons/DockerIcon.astro'
-import GitIcon from './icons/GitIcon.astro'
-import GithubIcon from './icons/GithubIcon.astro'
 import JavaScriptIcon from './icons/JavaScriptIcon.astro'
 import TypeScriptIcon from './icons/TypeScriptIcon.astro'
 import PHPIcon from './icons/PHPIcon.astro'
@@ -25,8 +23,6 @@ const iconMap = {
   node: NodeIcon,
   postgresql: PostgresIcon,
   docker: DockerIcon,
-  git: GitIcon,
-  github: GithubIcon,
   javascript: JavaScriptIcon,
   typescript: TypeScriptIcon,
   php: PHPIcon,
@@ -42,16 +38,11 @@ const allSkills: { name: string; icon: IconKey }[] = [
   { name: 'Node.js', icon: 'node' },
   { name: 'PostgreSQL', icon: 'postgresql' },
   { name: 'Docker', icon: 'docker' },
-  { name: 'Git', icon: 'git' },
-  { name: 'GitHub', icon: 'github' },
   { name: 'JavaScript', icon: 'javascript' },
   { name: 'TypeScript', icon: 'typescript' },
   { name: 'PHP', icon: 'php' },
   { name: 'Next.js', icon: 'next' }
 ]
-// Dividir la lista en dos sub-arrays
-const skillsRow1 = allSkills.slice(0, 7)
-const skillsRow2 = allSkills.slice(7, 14)
 ---
 
 <section
@@ -63,70 +54,22 @@ const skillsRow2 = allSkills.slice(7, 14)
       Mi Stack Tecnológico
     </h2>
 
-    {/* WRAPPER DE LA FILA 1 (MOVIMIENTO A LA IZQUIERDA) */}
-    <div class="overflow-hidden mb-8">
-      <div class="flex whitespace-nowrap animate-skill-scroll-left hover:paused">
-        {/* Contenido Original */}
-        {
-          skillsRow1.map(({ name, icon }) => {
-            // Usar el string 'icon' para encontrar el componente real en el map.
-            const IconComponent = iconMap[icon]
-
-            // Confirmar que el componente existe antes de renderizar (manejo de errores)
-            if (!IconComponent) return null
-
-            return (
-              <div class="inline-block flex-shrink-0 w-[calc(100%/6)] p-2">
-                <div class="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition duration-400 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
-                  <div class="w-12 h-12 mb-3 flex items-center justify-center">
-                    <IconComponent />
-                  </div>
-                  <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">{name}</p>
-                </div>
-              </div>
-            )
-          })
-        }
-
-        {/* Contenido Duplicado */}
-        {
-          skillsRow1.map(({ name, icon }) => {
-            // Usar el string 'icon' para encontrar el componente real en el map.
-            const IconComponent = iconMap[icon]
-
-            if (!IconComponent) return null
-
-            return (
-              <div class="inline-block flex-shrink-0 w-[calc(100%/6)] p-2">
-                <div class="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition duration-400 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
-                  <div class="w-12 h-12 mb-3 flex items-center justify-center">
-                    <IconComponent />
-                  </div>
-                  <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">{name}</p>
-                </div>
-              </div>
-            )
-          })
-        }
-      </div>
-    </div>
-    {/* WRAPPER DE LA FILA 2 (MOVIMIENTO A LA DERECHA) */}
-
     <div class="overflow-hidden">
-      <div class="flex whitespace-nowrap animate-skill-scroll-right hover:paused">
+      <div class="flex gap-4 sm:gap-6 whitespace-nowrap animate-skill-scroll-left hover:paused">
         {
-          skillsRow2.map(({ name, icon }) => {
+          allSkills.map(({ name, icon }) => {
             const IconComponent = iconMap[icon]
-
             if (!IconComponent) return null
 
             return (
-              <div class="inline-block flex-shrink-0 w-[calc(100%/6)] p-2">
-                <div class="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition duration-400 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
-                  <div class="w-12 h-12 mb-3 flex items-center justify-center">
+              <div class="flex-shrink-0 min-w-[140px] sm:min-w-[160px] md:min-w-[180px] p-2">
+                <div class="flex flex-col items-center p-4 sm:p-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
+                  <div class="w-14 h-14 sm:w-16 sm:h-16 mb-3 sm:mb-4 flex items-center justify-center">
                     <IconComponent />
                   </div>
-                  <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">{name}</p>
+                  <p class="text-sm sm:text-base md:text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">
+                    {name}
+                  </p>
                 </div>
               </div>
             )
@@ -134,19 +77,19 @@ const skillsRow2 = allSkills.slice(7, 14)
         }
 
         {
-          skillsRow2.map(({ name, icon }) => {
-            // Usar el string 'icon' para encontrar el componente real en el map.
+          allSkills.map(({ name, icon }) => {
             const IconComponent = iconMap[icon]
-
             if (!IconComponent) return null
 
             return (
-              <div class="inline-block flex-shrink-0 w-[calc(100%/6)] p-2">
-                <div class="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition duration-400 transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
-                  <div class="w-12 h-12 mb-3 flex items-center justify-center">
+              <div class="flex-shrink-0 min-w-[140px] sm:min-w-[160px] md:min-w-[180px] p-2">
+                <div class="flex flex-col items-center p-4 sm:p-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
+                  <div class="w-14 h-14 sm:w-16 sm:h-16 mb-3 sm:mb-4 flex items-center justify-center">
                     <IconComponent />
                   </div>
-                  <p class="text-lg font-semibold text-gray-800 dark:text-gray-200">{name}</p>
+                  <p class="text-sm sm:text-base md:text-lg font-semibold text-gray-800 dark:text-gray-200 text-center">
+                    {name}
+                  </p>
                 </div>
               </div>
             )
